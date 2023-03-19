@@ -20,5 +20,6 @@ use App\Http\Controllers\Admin\ControladorAdmin;
 //utilizado en las views para crear una redireccion de las views al welcome
 Route::get('/', function () {
     return view('welcome');
-})-> name('Bienvenidos');
+});
+
 
