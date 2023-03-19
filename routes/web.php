@@ -19,12 +19,3 @@ use App\Http\Controllers\Admin\ControladorAdmin;
 Route::get('/', function () {
     return view('welcome');
 });
-
-Route::group(['middleware' => ['adb']], function(){
-    // Ruta, /Clientes, donde se mostrara la pagina de Clientes
-    Route::get('/Clientes', [ControladorAdmin::class, 'Clientes']);
-    // Ruta, /Facturacion, donde se mostrara la pagina de Facturacion
-    Route::get('/Facturacion', [ControladorAdmin::class, 'Facturacion']);
-    // Ruta, /Contabilidad, donde se mostrara la pagina de Contabilidad
-    Route::get('/Contabilidad', [ControladorAdmin::class, 'Contabilidad']);
-});

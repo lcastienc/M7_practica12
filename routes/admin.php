@@ -13,6 +13,9 @@ use App\Http\Controllers\Admin\ControladorAdmin;
 |
 */
 
+//Para acceder a las rutas sera /adb/la ruta a la que queramos ir
+//ejemplo: http://127.0.0.1:8000/adb/Clientes 
+//Eso nos llevara a la view de Clientes
 Route::group(['middleware' => ['adb']], function(){
     // Ruta, /Clientes, donde se mostrara la pagina de Clientes
     Route::get('/Clientes', [ControladorAdmin::class, 'Clientes']);
