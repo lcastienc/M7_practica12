@@ -1,10 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
 use App\Http\Controllers\Admin\ControladorAdmin;
-
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,10 +12,6 @@ use App\Http\Controllers\Admin\ControladorAdmin;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
-Route::get('/', function () {
-    return view('welcome');
-});
 
 Route::group(['middleware' => ['adb']], function(){
     // Ruta, /Clientes, donde se mostrara la pagina de Clientes
