@@ -16,6 +16,10 @@ use App\Http\Controllers\Admin\ControladorAdmin;
 |
 */
 
+//Añadimos name() para asignar un alias al Route de la raiz que luego sera
+//utilizado en las views para crear una redireccion de las views al welcome
 Route::get('/', function () {
     return view('welcome');
 });
+
+

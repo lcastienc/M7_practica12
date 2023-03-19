@@ -1,2 +1,4 @@
-{{-- Mensaje que sera mostrado, este mensaje es definido en el controladorAdmin --}}
+
 <h1>{{ $mensajeClientes }}</h1>
+{{-- Redireccionamiento hacia la view welcome, que tiene el alias de 'Bienvenidos' , mediante el uso del route()--}}
+<a href="{{ route('Bienvenidos') }}">Vamonos página principal</a>
