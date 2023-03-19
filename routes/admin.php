@@ -23,4 +23,5 @@ Route::group(['middleware' => ['adb']], function(){
     Route::get('/Facturacion', [ControladorAdmin::class, 'Facturacion']);
     // Ruta, /Contabilidad, donde se mostrara la pagina, la view, de Contabilidad
     Route::get('/Contabilidad', [ControladorAdmin::class, 'Contabilidad']);
+
 });
