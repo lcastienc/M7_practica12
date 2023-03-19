@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\Admin\ControladorAdmin;
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,6 +16,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+//Añadimos name() para asignar un alias al Route de la raiz que luego sera
+//utilizado en las views para crear una redireccion de las views al welcome
 Route::get('/', function () {
     return view('welcome');
-});
+})-> name('Bienvenidos');
+
