@@ -16,15 +16,9 @@ use App\Http\Controllers\Admin\ControladorAdmin;
 |
 */
 
+//Añadimos name() para asignar un alias al Route de la raiz que luego sera
+//utilizado en las views para crear una redireccion de las views al welcome
 Route::get('/', function () {
     return view('welcome');
-});
+})-> name('Bienvenidos');
 
-Route::group(['middleware' => ['adb']], function(){
-    // Ruta, /Clientes, donde se mostrara la pagina de Clientes
-    Route::get('/Clientes', [ControladorAdmin::class, 'Clientes']);
-    // Ruta, /Facturacion, donde se mostrara la pagina de Facturacion
-    Route::get('/Facturacion', [ControladorAdmin::class, 'Facturacion']);
-    // Ruta, /Contabilidad, donde se mostrara la pagina de Contabilidad
-    Route::get('/Contabilidad', [ControladorAdmin::class, 'Contabilidad']);
-});
